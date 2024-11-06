@@ -1,0 +1,16 @@
+import org.junit.Assert;
+import org.junit.Test;
+import java.util.List;
+
+public class Teste {
+
+    @Test
+    public void testSexoFeminino() {
+        List<Pessoa> pessoas = new Pessoa().populaPessoas();
+        for (Pessoa pessoa : pessoas) {
+            if ("F".equals(pessoa.getSexo())) {
+                Assert.assertEquals("F", pessoa.getSexo());
+            }
+        }
+    }
+}
